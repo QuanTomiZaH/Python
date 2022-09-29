@@ -15,7 +15,4 @@ CMD [ "python", "./migrate.py" ]
 # Go to container location
 # Copy the python script and dockerfile to the host that is used for the migration
 # docker build . -t migrate:local
-# docker run -v <src>:/data/source -v <dest>:/data/dest -v <logs>:/data/logs -v <tmp>/test/tmp:/data/tmp
-
-# docker run --name migratepy -d -v /home/itsdone.local/robin.gjaltema/data/src:/data/source -v /home/itsdone.local/robin.gjaltema/data/dst:/data/dest -v /home/itsdone.local/robin.gjaltema/data/logs:/data/logs -v /home/itsdone.local/robin.gjaltema/data/tmp/:/data/tmp migrate:local
-# docker container run -d -v /home/itsdone.local/robin.gjaltema/data/src:/data/source -v /home/itsdone.local/robin.gjaltema/data/dst:/data/dest -v /home/itsdone.local/robin.gjaltema/data/logs:/data/logs -v /home/itsdone.local/robin.gjaltema/data/tmp/test/tmp:/data/tmp migrate:local
+# docker run --name migratepy -d -v <source>:/data/source -v <dest>:/data/dest -v <logs>:/data/logs -v <tmp>:/data/tmp migrate:local
